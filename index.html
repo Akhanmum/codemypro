@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Font Awesome Free Version -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    
+    <title>Ali's Portfolio</title>
+    <style>
+
+html{
+    scroll-behavior: smooth;
+   
+}
+
+        body {
+            margin: 0;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+            
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 70px;
+            box-sizing: border-box;
+        }
+        .navbar h1 {
+            color: white;
+            margin: 0;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 10px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-right: 20px;
+        }
+        .navbar ul li a:hover {
+            color: black;
+            background-color: cyan;
+            box-shadow: 0px 0px 10px cyan;
+            transition: 0.5s;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 40px;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        @media (max-width: 768px) {
+
+            
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 30%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                text-align: right;
+                justify-content: right;
+            }
+            .navbar ul.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .hamburger.active .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger.active .bar2 {
+            opacity: 0;
+        }
+        .hamburger.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+            
+            color: black;
+            background-color: cyan;
+            box-shadow: 0px 0px 10px cyan;
+            color: cyan;
+            transition: 0.5s;
+        }
+        
+
+
+
+        /* Home Section */
+        #home {
+            scroll-behavior: smooth ;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 70px 20px;
+            color: black;
+            margin-bottom: 1000px;
+            background-image: url("/project/assets/images/homepage.png");
+            background-size: cover;
+            margin-bottom: 0; /* Remove extra space */
+    padding-top: 80px; /* Prevent navbar overlap */
+        }
+        #home h1 {
+            font-size: 2.9rem;
+            margin-bottom: 10px;
+        }
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: rgb(1, 5, 1);
+        }
+        #home .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;);
+        }
+        #home .btn:hover {
+            background: white;
+            color: black;
+            box-shadow: 0px 0px 10px cyan;
+        }
+        section {
+            height: 100vh;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) { /* Mobile */
+    #home {
+        height: 200px;
+        padding: 40px 10px;
+        margin-bottom: 500px;
+        
+    }
+    #home h1 {
+        font-size: 2rem;
+    }
+    #home p {
+        font-size: 1.1rem;
+    }
+    #home .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+    #home {
+        height: 150px;
+        padding: 30px 5px;
+        margin-bottom: 0; /* Remove extra space */
+    padding-top: 80px; /* Prevent navbar overlap */
+    }
+    #home h1 {
+        font-size: 1rem;
+    }
+    #home p {
+        font-size: 1rem;
+    }
+    #home .btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+
+p span:hover{
+    background-color: white;
+   
+} 
+
+#typed-title, #typed-subtitle {
+        font-weight: bold;
+        transition: color 0.5s ease-in-out;
+        
+    }
+
+
+
+
+    #about {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #f5f5f5;
+        height: auto;
+        padding-bottom: 4px;
+        background-image: url("/project/assets/images/about.png"); 
+    }
+
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .about-text {
+        flex: 1;
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 13px;
+        
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+        color: #000000;
+        line-height: 1.6;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    /* Skills List */
+    .skills-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .skills-list li {
+        font-size: 1rem;
+        padding: 10px;
+        background: purple;
+        border-left: 5px solid cyan;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+
+
+    }
+
+    .skills-list li:hover {
+        border-left-color: red;
+        transform: translateX(5px);
+        background-color: rgb(9, 37, 9);
+        transition: 0.5s;
+    }
+
+    /* Profile Photo Loader Effect */
+    .about-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.photo-loader {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-loader::before {
+    content: "";
+    position: absolute;
+    width: 220px; /* Slightly bigger for the effect */
+    height: 220px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: red;
+    border-right-color: rgb(8, 51, 243);
+    border-bottom-color: white;
+    border-left-color: rgb(62, 219, 0);
+    animation: rotate 3s linear infinite;
+}
+   
+.photo-loader img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+    /* Color-Changing Border Animation */
+    @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            justify-content: center;
+        }
+
+        .about-text {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .about-photo {
+            order: -1; /* Moves photo to the top */
+            margin-bottom: 20px;
+        }
+
+
+
+        .photo-loader::before {
+        width: 200px;
+        height: 200px;
+    }
+
+   
+        .skills-list {
+            grid-template-columns: repeat(2, minmax(100px, 1fr)); /* Adjust skills layout */
+        }
+    }
+
+    @media (max-width: 480px) { 
+        .about-photo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .photo-loader {
+            width: 180px;
+            height: 180px;
+        }
+
+        .photo-loader img {
+            width: 160px;
+            height: 160px;
+        }
+
+        .skills-list {
+            grid-template-columns: repeat(1, minmax(100px, 1fr)); /* Stack skills on small screens */
+        }
+    }
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: green;
+    height: auto; /* Removed fixed height */
+ box-shadow: 0 px 0px 20px black;
+    margin-bottom: 0px
+}
+
+/* Projects Grid */
+.projects-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 25px; /* Ensures space between projects */
+}
+
+/* Individual Project Cards */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px; /* Extra space between projects */
+}
+
+
+
+
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px);
+   box-shadow: 0px 30px 60px black;
+    
+}
+
+/* Fix for Image Not Loading */
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+    border-radius: 8px;
+    background-color: #ccc; /* Temporary background if image fails */
+}
+
+
+.my-pro{
+    font-size: 40px;
+    color: lavenderblush;
+}
+
+
+.btn{
+   color:  black;
+   border: 3px solid black;
+   border-radius: 20px;
+   padding: 10px;
+   background-color: skyblue;
+   font-weight: bold;
+   transition: 0.5s;
+   text-decoration: none;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+
+/* Fix Contact Section Overlapping */
+@media (max-width: 768px) {
+    .projects-container {
+        gap: 30px;
+        padding-bottom: 50px; /* Added bottom padding */
+        flex-direction: column;
+       
+    }
+
+    #projects{
+        margin-bottom: 0px;
+    }
+
+    .project-card {
+        width: 95%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) { /* Extra Small Screens */
+    #projects {
+        padding: 50px 20px;
+        padding-bottom: 0px; /* Adjusted spacing */
+        
+    }
+    
+.my-pro{
+  font-size: 1.8rem;
+  color: lavenderblush;
+}
+
+    .project-card {
+        width: 50%;
+    }
+}
+
+
+#contact {
+    padding: 40px 10px;
+    text-align: center;
+    background: grey;
+    color: white;
+    padding-top: 15px; /* Adjusted to align properly */
+    
+    /* Use Absolute URL for Testing */
+    background-image: url("/project/assets/images/contact.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    #contact h2 {
+        font-size: 2.9rem;
+        color:black;
+        background-color: white;
+        width: 700px;
+    
+        
+    }
+
+    #contact p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    /* Contact Form */
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.2);
+        border: solid purple 3px;
+        
+    }
+
+    .input-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 95%;
+        padding: 10px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+        background: #f5f5f5;
+        transition: 0.3s;
+        border: solid purple 3px;
+    }
+
+    .input-group label {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: #666;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus {
+        border-color: cyan;
+        background: white;
+        box-shadow: 0px 0px 8px cyan;
+    }
+
+    .input-group input:focus + label,
+    .input-group textarea:focus + label,
+    .input-group input:valid + label,
+    .input-group textarea:valid + label {
+        top: 0;
+        left: 10px;
+        font-size: 0.9rem;
+        color: cyan;
+        background: white;
+        padding: 0 5px;
+    }
+
+    .con-btn {
+        width: 50%;
+        padding: 12px;
+        font-size: 1.2rem;
+        background: cyan;
+        color: black;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        border: 3px solid black;
+    }
+
+    .con.btn:hover {
+        background: black;
+        color: white;
+        box-shadow: 0px 0px 10px black;
+
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .contact-form {
+            width: 90%;
+           
+            
+        }
+    }
+
+    @media (max-width: 480px) {
+        #contact {
+            padding: 4px 15px;
+            margin-bottom: 0; /* Remove extra space */
+          
+        }
+
+        .contact-form {
+            padding: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        .btn {
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+
+/* Footer Styling */
+#footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid cyan;
+}
+
+/* Footer Info */
+.footer-info {
+    text-align: left;
+    max-width: 500px;
+}
+
+.footer-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: cyan;
+}
+
+.footer-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Social Media Icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: cyan;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.footer-social a:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+/* Copyright Text */
+.footer-copy {
+    font-size: 1rem;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-social a {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Ali's <span style="color: tomato;">Portfolio</span></h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        
+        <h1 style="color: white;"><span id="typed-title"></span></h1>
+        <p><span style="color: brown; font-weight: bolder;">Transforming</span> your ideas into <span style="color: black;border: 3px solid red; padding: 3px; border-radius: 30px; background-color: red;">reality</span></p>
+        <button class="btn" onclick="window.location.href='#projects'" style="padding: 10px; ">View Portfolio</button>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <!-- Profile Photo with Rotating Loader -->
+            <div class="about-photo">
+                <div class="photo-loader">
+                    <img src="/project/assets/images/developer.png" alt="Ali's Photo">
+                </div>
+            </div>
+    
+            <!-- About Text -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm Ali, a passionate web developer with 3 years of experience in creating modern, responsive, and interactive web applications. I specialize in front-end and back-end development, crafting smooth user experiences.</p>
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js & Vue.js</li>
+                    <li>Node.js & Express.js</li>
+                    <li>Responsive & Mobile-First Design</li>
+                    <li>UI/UX Design & Animation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="projects">
+        <h2 class="my-pro">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="/project/assets/images/hotelreservation.png" alt="Project 1">
+                <h3>Hotel Reservation</h3>
+                <p>A hotel reservation system allows guests to book rooms easily while ensuring seamless management for hotel staff. It enhances convenience, efficiency, and customer satisfaction.</p>
+            </div>
+
+        
+    
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="/project/assets/images/tictac.png"alt="Project 2">
+                <h3>tic-tac-toe game</h3>
+                <p>Tic-Tac-Toe is a classic strategy game where players compete to align three marks in a row. Simple yet engaging, it’s a fun challenge for all ages.</p>
+               
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="/project/assets/images/weather.png" alt="Project 3">
+                <h3 style="font-size: 20px;">Weather Web App</h3>
+                <p>A weather app provides real-time forecasts, temperature updates, and alerts, helping users plan their day efficiently. Stay informed about changing weather conditions anytime, anywhere.</p>
+            </div>
+            
+        </div>
+    </section>
+    
+
+   <!-- Contact Section -->
+<section id="contact">
+    <h3 style="color: black; font-size: 30px; padding-top: 30px;">Contact Me</h3>
+    <p>Have a question or want to work together? Fill out the form below!</p>
+
+    <div class="contact-container">
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Your Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Your Email</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn" style="cursor: pointer;">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+    
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer id="footer">
+    
+
+        <div class="footer-social" >
+            
+            <a href="https://wa.me/+917506294298" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:usetech6@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+917506294298"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+
+    <p class="footer-copy">© 2025  CODE NOW ❤️ All Rights Reserved.</p>
+
+</footer>
+
+<!-- Font Awesome CDN (Place this in <head> or before closing body tag) -->
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+
+
+    
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar ul');
+            const hamburger = document.querySelector('.hamburger');
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link (for mobile)
+        document.querySelectorAll('.navbar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar ul').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+    </script>
+
+<script>
+    var typedTitle = new Typed("#typed-title", {
+        strings: ["Crafting Digital Experiences", "Building Innovative Solutions", "Elevating Your Brand Online"],
+        typeSpeed: 70,
+        backSpeed: 35,
+        loop: true,
+        preStringTyped: function () {
+            changeColor("#typed-title");
+        }
+    });
+
+
+ function changeColor(elementId) {
+        const colors = ["red", "black", "blue", "green", "purple", "orange", "cyan"]; 
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.querySelector(elementId).style.color = randomColor;
+    }
+
+</script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        emailjs.init("-HKGYf6LFk9lTHVfj"); // Replace with your actual EmailJS User ID
+
+        document.querySelector(".contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Collect form data
+            const templateParams = {
+                name: document.querySelector("#name").value,
+                email: document.querySelector("#email").value,
+                message: document.querySelector("#message").value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_bvxmj0j", "template_l3npzfg", templateParams)
+                .then(response => {
+                    alert("Message Sent Successfully!");
+                    document.querySelector(".contact-form").reset(); // Clear the form
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Failed to Send Message. Please try again.");
+                });
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
